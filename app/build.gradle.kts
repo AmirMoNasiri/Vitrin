@@ -29,8 +29,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         compose = true
@@ -63,8 +63,11 @@ dependencies {
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.androidx.work.runtime)
     implementation(libs.hilt.work)
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.0")
-    implementation("com.airbnb.android:lottie-compose:6.3.0")
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.gson)
+    implementation(libs.gson)
+    implementation(libs.okhttp.logging)
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.11.0")
     ksp(libs.hilt.work.compiler)
     ksp(libs.room.compiler)
     ksp(libs.hilt.compiler)
