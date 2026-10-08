@@ -34,6 +34,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -68,6 +69,7 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.okhttp.logging)
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.11.0")
+    implementation("com.adamglin:phosphor-icon:1.0.0")
     ksp(libs.hilt.work.compiler)
     ksp(libs.room.compiler)
     ksp(libs.hilt.compiler)
